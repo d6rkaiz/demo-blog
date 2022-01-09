@@ -19,5 +19,5 @@
           %td.border
             = link_to 'Show', post, class: 'ml-2 rounded-md px-2 py-2 bg-gray-100 inline-block font-medium'
             = link_to 'Edit', edit_post_path(post), class: 'ml-2 rounded-md px-2 py-2 bg-gray-100 inline-block font-medium'
-            = link_to 'Delete', post, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'ml-2 rounded-md px-2 py-2 bg-red-500 text-white inline-block font-medium'
+            = link_to 'Delete', post, :data => { "turbo-method": :delete, "turbo-confirm": 'Are you sure?' }, class: 'ml-2 rounded-md px-4 py-3 bg-red-500 text-white inline-block font-medium'
 
