@@ -1,23 +1,23 @@
-%h1 Listing posts
+.w-full
+  .flex.justify-between.items-center
+    %h1.text-white.text-mg.font-bold.text-2xl Listing posts
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Content
-      %th
-      %th
-      %th
+    = link_to 'New Post', new_post_path, class: 'rounded-lg px-4 py-3 bg-blue-500 text-white block font-bold font-medium'
 
-  %tbody
-    - @posts.each do |post|
+  %table.bg-white.w-full.table-fixed.rounded-md.mt-3
+    %thead
       %tr
-        %td= post.title
-        %td= post.content
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th.px-4.py-2{class: "w-1/2"} Title
+        %th.px-4.py-2{class: "w-1/4"} Created at
+        %th.px-4.py-2{class: "w-1/4"}
 
-%br
+    %tbody
+      - @posts.each do |post|
+        %tr
+          %td.border.px-4.py-2= post.title
+          %td.border.px-4.py-2= post.created_at.strftime('%Y/%m/%d %H:%M')
+          %td.border
+            = link_to 'Show', post, class: 'ml-2 rounded-md px-2 py-2 bg-gray-100 inline-block font-medium'
+            = link_to 'Edit', edit_post_path(post), class: 'ml-2 rounded-md px-2 py-2 bg-gray-100 inline-block font-medium'
+            = link_to 'Delete', post, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'ml-2 rounded-md px-2 py-2 bg-red-500 text-white inline-block font-medium'
 
-= link_to 'New Post', new_post_path

@@ -1,5 +1,6 @@
-%h1 New post
+.w-full.bg-white.p-4.rounded-md.mt-4
+  %h1.text-mg.font-bold.text-2xl New post
 
-= render 'form'
+  = render 'form', post: @post
 
-= link_to 'Back', posts_path
+  = link_to 'Back to Lists', posts_path, class: 'ml-2 rounded-md px-4 py-2 bg-gray-100 inline-block font-medium'
