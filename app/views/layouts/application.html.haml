@@ -10,5 +10,6 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   %body.bg-gray-400
+    = turbo_frame_tag :notice
     %main.container.mx-auto.mt-28.px-5.flex
       = yield
