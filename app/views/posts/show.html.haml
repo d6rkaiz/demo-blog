@@ -1,18 +1,19 @@
-.w-full.bg-white.p-4.rounded-md.mt-4
-  %p#notice= notice
+= turbo_frame_tag :form_post do
+  .w-full.bg-white.p-4.rounded-md.mt-4
+    %p#notice= notice
 
-  %p.my-5
-    %b Title:
-    %br/
-    = @post.title
-  %p.my-5
-    %b Content:
-    %br/
-    = @post.content
+    %p.my-5
+      %b Title:
+      %br/
+      = @post.title
+    %p.my-5
+      %b Content:
+      %br/
+      = @post.content
 
-  %hr
+    %hr
 
-  .my-3
-    = link_to 'Edit', edit_post_path(@post), class: 'ml-2 rounded-md px-4 py-3 bg-gray-100 inline-block font-medium'
-    = link_to 'Delete', @post, :data => { "turbo-method": :delete, "turbo-confirm": 'Are you sure?' }, class: 'ml-2 rounded-md px-4 py-3 bg-red-500 text-white inline-block font-medium'
-    = link_to 'Back to Lists', posts_path, class: 'ml-2 rounded-md px-4 py-3 bg-gray-100 inline-block font-medium'
+    .my-3
+      = link_to 'Edit', edit_post_path(@post), class: 'ml-2 rounded-md px-4 py-3 bg-gray-100 inline-block font-medium'
+      = link_to 'Delete', @post, :data => { "turbo-method": :delete, "turbo-confirm": 'Are you sure?' }, class: 'ml-2 rounded-md px-4 py-3 bg-red-500 text-white inline-block font-medium'
+      = link_to 'Back to Lists', posts_path, class: 'ml-2 rounded-md px-4 py-3 bg-gray-100 inline-block font-medium'

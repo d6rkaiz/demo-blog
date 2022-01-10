@@ -1,6 +1,7 @@
-.w-full.bg-white.p-4.rounded-md.mt-4
-  %h1.text-mg.font-bold.text-2xl New post
+= turbo_frame_tag :form_post do
+  .w-full.bg-white.p-4.rounded-md.mt-4
+    %h1.text-mg.font-bold.text-2xl New post
 
-  = render 'form', post: @post
+    = render 'form', post: @post
 
-  = link_to 'Back to Lists', posts_path, class: 'ml-2 rounded-md px-4 py-2 bg-gray-100 inline-block font-medium'
+    = link_to 'Back to Lists', posts_path, class: 'ml-2 rounded-md px-4 py-2 bg-gray-100 inline-block font-medium'

@@ -1,16 +1,17 @@
-= form_with(model: post, id: 'form', class: 'contents') do |f|
-  - if @post.errors.any?
-    #error_explanation.bg-red-50.text-red-500.px-4.py-2.font-medium.rounded-md
-      %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
-      %ul
-        - @post.errors.full_messages.each do |msg|
-          %li= msg
+= turbo_frame_tag dom_id post do
+  = form_with(model: post, id: 'form', class: 'contents') do |f|
+    - if @post.errors.any?
+      #error_explanation.bg-red-50.text-red-500.px-4.py-2.font-medium.rounded-md
+        %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
+        %ul
+          - @post.errors.full_messages.each do |msg|
+            %li= msg
 
-  .my-5
-    = f.label :title
-    = f.text_field :title, class: 'block shadow rounded-md border border-gray-300 outline-none px-4 py-3 mt-2 w-full'
-  .my-5
-    = f.label :content
-    = f.text_field :content, class: 'block shadow rounded-md border border-gray-300 outline-none px-4 py-3 mt-2 w-full'
-  .inline
-    = f.submit 'Save', class: 'rounded-md px-4 py-2 bg-blue-500 text-white inline-block font-medium'
+    .my-5
+      = f.label :title
+      = f.text_field :title, class: 'block shadow rounded-md border border-gray-300 outline-none px-4 py-3 mt-2 w-full'
+    .my-5
+      = f.label :content
+      = f.text_field :content, class: 'block shadow rounded-md border border-gray-300 outline-none px-4 py-3 mt-2 w-full'
+    .inline
+      = f.submit 'Save', class: 'rounded-md px-4 py-2 bg-blue-500 text-white inline-block font-medium'
