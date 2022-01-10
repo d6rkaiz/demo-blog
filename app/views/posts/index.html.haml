@@ -2,7 +2,9 @@
   .flex.justify-between.items-center
     %h1.text-white.text-mg.font-bold.text-2xl Listing posts
 
-    = link_to 'New Post', new_post_path, class: 'rounded-lg px-4 py-3 bg-blue-500 text-white block font-bold font-medium'
+    = link_to 'New Post', new_post_path, class: 'rounded-lg px-4 py-3 bg-blue-500 text-white block font-bold font-medium', data: { 'turbo-frame': 'form_post' }
+
+  = turbo_frame_tag :form_post
 
   %table.bg-white.w-full.table-fixed.rounded-md.mt-3
     %thead
