@@ -1,0 +1,6 @@
+- if @post.errors.present?
+  = form_post_stream(post: @post)
+- else
+  = turbo_stream.replace :form_post do
+    = turbo_frame_tag :form_post
+  = turbo_stream.prepend :postlists, partial: 'post', locals: { post: @post }
