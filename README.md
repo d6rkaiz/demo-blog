@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Component
 
-Things you may want to cover:
+Ruby: 3.1.0
+Rails: 7.0.1 (propshaft & importmap & tailwind & hamlit & requestjs)
 
-* Ruby version
+## reference
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://dev.to/nemuba/blog-demo-using-rails-7-hotwire-rails-tailwindcss-stimulus-railsrequestjs-2c7a
