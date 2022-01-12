@@ -72,3 +72,4 @@ group :test do
 end
 
 gem "hamlit-rails", "~> 0.2.3"
+gem "requestjs-rails", "~> 0.0.6"
